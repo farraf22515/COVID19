@@ -30,16 +30,9 @@ class Update extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <div className="input-group mb-3" style={{ "width": "300px" }}>
-            <div className="input-group-prepend">
-              <span for="id" className="input-group-text">ID</span>
-            </div>
-            <input class="form-control" type="text" onChange={(e) => { this.setState({ id: e.target.value }) }}></input>
-
-            <div style={{ "width": "25%" }} >
-              <input class="form-control" type="submit" ></input>
-            </div>
-          </div>
+          <label for="id" >Id : </label>
+          <input type="text" onChange={(e) => { this.setState({ id: e.target.value }) }}></input>
+          <input type="submit"></input>
         </form>
         {
           (this.state.data !== undefined) ? <FormUpdate data={this.state.data} /> : <h1>Plese Enter Again</h1>

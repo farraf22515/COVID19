@@ -1,0 +1,20 @@
+.card-body{
+    display: grid;
+    grid-template-areas:
+    'colForm colMap colMap'
+    'colBtn colMap colMap'
+    'colBtn colMap colMap'
+    ;
+    grid-gap: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    .card-body{
+        display: grid;
+        grid-template-areas: 
+        'colForm'
+        'colMap'
+        'colBtn'
+        ;
+    }
+}
